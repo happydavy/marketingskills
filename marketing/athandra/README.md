@@ -10,6 +10,18 @@
 | `03-channels-and-copy.md` | 渠道优先级、落地页英文文案、目标页清单、集成分发、Product Hunt / Show HN / 目录提交、Reddit / X / Dev.to 模板、Google RSA（已校验长度）、Reddit/X 广告、4 封冷邮件序列、推荐计划 |
 | `04-90-day-plan.md` | 北极星指标、12 周任务表（每项标注对应技能）、每周运营检查、三档预算、风险对策 |
 
+## 装进你的产品项目（推荐方式）
+
+在产品项目根目录执行一条命令，自动完成：安装 53 个技能到 `.claude/skills/`、写入 `.agents/product-marketing.md`、把本目录的方案文档复制到 `docs/marketing/`、给 CLAUDE.md 追加一段营销说明：
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/happydavy/marketingskills/claude/dazzling-edison-zne89q/marketing/athandra/kit/install.sh)
+```
+
+可选参数（环境变量）：`AGENTS="claude-code codex cursor"` 同时给多个 agent 安装；`SKIP_SKILLS=1` 只复制文档不装技能；`KIT_FROM=<目录或 URL>` 改文档来源（分支合并到 main 后把 URL 里的分支名换成 `main`）。脚本见 `kit/install.sh`，CLAUDE.md 追加内容见 `kit/CLAUDE.snippet.md`。
+
+安装后在产品项目里打开 Claude Code，第一句话：「用 product-marketing 技能，读取 .agents/product-marketing.md，逐项问我 [CONFIRM] 的内容并更新」。
+
 ## 怎么继续用这个仓库的技能
 
 在仓库根目录对 agent 说：
