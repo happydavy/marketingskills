@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Athandra marketing kit installer.
 # Run from the ROOT of your product project:
-#   bash <(curl -fsSL https://raw.githubusercontent.com/happydavy/marketingskills/claude/dazzling-edison-zne89q/marketing/athandra/kit/install.sh)
+#   bash <(curl -fsSL https://raw.githubusercontent.com/happydavy/marketingskills/main/marketing/athandra/kit/install.sh)
 # Options (env vars):
 #   AGENTS="claude-code"            agents to install skills for (space-separated: claude-code codex cursor windsurf ...)
 #   KIT_FROM="<url-or-local-dir>"   where to fetch the marketing docs from (default: this fork's branch on GitHub)
@@ -9,7 +9,7 @@
 set -euo pipefail
 
 AGENTS="${AGENTS:-claude-code}"
-KIT_FROM="${KIT_FROM:-https://raw.githubusercontent.com/happydavy/marketingskills/claude/dazzling-edison-zne89q/marketing/athandra}"
+KIT_FROM="${KIT_FROM:-https://raw.githubusercontent.com/happydavy/marketingskills/main/marketing/athandra}"
 DOCS=(README.md 01-positioning.md 02-icp.md 03-channels-and-copy.md 04-90-day-plan.md)
 
 if [ ! -d .git ]; then

@@ -15,10 +15,10 @@
 在产品项目根目录执行一条命令，自动完成：安装 53 个技能到 `.claude/skills/`、写入 `.agents/product-marketing.md`、把本目录的方案文档复制到 `docs/marketing/`、给 CLAUDE.md 追加一段营销说明：
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/happydavy/marketingskills/claude/dazzling-edison-zne89q/marketing/athandra/kit/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/happydavy/marketingskills/main/marketing/athandra/kit/install.sh)
 ```
 
-可选参数（环境变量）：`AGENTS="claude-code codex cursor"` 同时给多个 agent 安装；`SKIP_SKILLS=1` 只复制文档不装技能；`KIT_FROM=<目录或 URL>` 改文档来源（分支合并到 main 后把 URL 里的分支名换成 `main`）。脚本见 `kit/install.sh`，CLAUDE.md 追加内容见 `kit/CLAUDE.snippet.md`。
+可选参数（环境变量）：`AGENTS="claude-code codex cursor"` 同时给多个 agent 安装；`SKIP_SKILLS=1` 只复制文档不装技能；`KIT_FROM=<目录或 URL>` 改文档来源。脚本见 `kit/install.sh`，CLAUDE.md 追加内容见 `kit/CLAUDE.snippet.md`。
 
 安装后在产品项目里打开 Claude Code，第一句话：「用 product-marketing 技能，读取 .agents/product-marketing.md，逐项问我 [CONFIRM] 的内容并更新」。
 
